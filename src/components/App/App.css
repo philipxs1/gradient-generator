@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically (optional, depending on desired overall page layout) */
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  margin: 0; /* Remove default body margin */
+  background-color: var(--color-grey); /* Just for visual context */
+}

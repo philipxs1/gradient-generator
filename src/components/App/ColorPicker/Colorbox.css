@@ -1,0 +1,123 @@
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  border: var(--border-green);
+} */
+
+.grid-container {
+  display: grid;
+  -ms-grid-gap: 64px 48px;
+  gap: 64px 48px;
+  grid-template-columns: 1fr minmax(350px, 1fr);
+  grid-template-areas:
+    "preview header"
+    "preview controls"
+    "preview code";
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 32px 128px;
+  isolation: isolate;
+}
+
+.preview-container {
+  min-height: 800px;
+  grid-area: preview;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  z-index: 3;
+  min-width: 500px;
+  background-color: black;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  filter: drop-shadow(0 0 16px hsl(208, 10%, 40%));
+  border-radius: 16px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.color-container {
+  display: flex;
+  align-items: start;
+  padding: 0;
+}
+
+.color-wrapper {
+  list-style: none;
+}
+
+.colorpicker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 25px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.color-swatch {
+  width: 90px;
+  height: 90px;
+  background-color: #444;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.color-button {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 18px;
+  height: 52px;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+}
+
+.color-button:hover {
+  box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
+  opacity: 0.85;
+}
+
+.color-button:active {
+  outline: 0;
+}
+
+.button-84:focus {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .button-84 {
+    height: 48px;
+  }
+}

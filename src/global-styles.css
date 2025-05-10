@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  --color-green: hsl(120deg 80% 35%);
+  --color-red: hsl(345deg 100% 50%);
+  --color-blue: hsl(235deg 100% 50%);
+  --color-orange: hsl(35deg 100% 46%);
+  --color-border: hsl(208, 10%, 30%);
+  --color-grey: hsl(260, 10%, 10%);
+
+  --border-green: 2px solid hsl(120deg 80% 35%);
+  --border-red: 2px solid hsl(345deg 100% 50%);
+  --border-blue: 2px solid hsl(235deg 100% 50%);
+  --border-orange: 2px solid hsl(35deg 100% 46%);
+}
